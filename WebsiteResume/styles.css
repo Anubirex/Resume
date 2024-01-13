@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.width-limiter {
+    margin: auto;
+    max-width: 1250px;
+}
+header {
+    position: fixed;
+    background-color: #00539C;
+    height: 4rem;
+    width: 100%;
+    text-align: left;
+    box-shadow: 3px 3px 8px;
+}
+header h1 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    padding-left: 1rem;
+}
+header h2 {
+    color: #CCCCCC;
+    font-size: .75rem;
+    padding-left: 1rem;
+}
+.menu {
+    border-radius: 50%;
+    position: fixed;
+    height: 7.5rem;
+    width: 7.5rem;
+    background-color: #800000;
+    top: -2.15rem;
+    right: -2rem;
+    z-index: 100;
+    box-shadow: -2px 2px 8px;
+}
+.burger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 101;
+    top: 2.75rem;
+    right: 2.8rem;
+}
+.bar {
+    width: 40px;
+    height: 6px;
+    background-color: #ccc;
+    margin: 8px 0;
+    z-index: 101;
+    transition: 0.4s;
+}
+.burger-menu.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-13px, 6px);
+}
+
+.burger-menu.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-13px, -6px);
+}
+.menu-items {
+    display: none;
+    position: fixed;
+    height: 18rem;
+    width: 18rem;
+    top: -4rem;
+    right: -4rem;
+    background-color: #800000;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional */
+    z-index: 99;
+    font-size: 1.25rem;
+    box-shadow: -2px 2px 8px;
+}
+.menu-items a:first-child {
+    position: fixed;
+    top: .25rem;
+    right: 9rem;
+}
+.menu-items a:nth-child(2) {
+    position: fixed;
+    top: 2.5rem;
+    right: 6.25rem;
+}
+.menu-items a:nth-child(3) {
+    position: fixed;
+    top: 4.75rem;
+    right: 8.25rem;
+}
+.menu-items a:nth-child(4) {
+    position: fixed;
+    top: 7rem;
+    right: 9.75rem;
+}
+.menu-items a:nth-child(5) {
+    position: fixed;
+    top: 9.25rem;
+    right: 5.5rem;
+}
+.menu-items a:last-child {
+    position: fixed;
+    top: 11.5rem;
+    right: 4.5rem;
+}
+.menu-items a {
+    display: block;
+    color:  #FFF8DC;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu.expanded .menu-items {
+    display: block;
+}
+.hero {
+    background-color: #00539C;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 5.5rem 0 .05rem 0;
+    height: calc(100vh - 6rem);
+}
+.hero-content {
+    min-width: none;
+    color: #FEE715;
+}
+.hero-content p {
+    margin: .5rem 1rem .5rem 1rem;
+    font-size: 1.16rem;
+    color: white;
+}
+.hero-content img {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+    border: 2px ridge #E0E0E0;
+}
+.hero-img {
+    display: flex;
+    justify-content: center;
+}
+.work-history {
+    background-color: #101820;
+    width: 100vw;
+    height: auto;
+    padding: 3.5rem 0 2rem 0;
+}
+.work-history-container {
+    min-width: none;
+    color: white;
+}
+.work-history-container h2 {
+    padding: 1rem;
+    text-align: center;
+    font-size: 4rem;
+    color: #D3D3D3;
+}
+.work-history-container h3 {
+    margin-left: 1rem;
+    color: #FF0000;
+    font-size: 1.3rem;
+}
+.work-history-container p {
+    margin: .5rem 1rem .5rem 1rem;
+    font-size: 1.2rem;
+}
+.work-history-container span {
+    color: cyan;
+    font-size: 1.3rem;
+}
+
+.education {
+    background-color: #007F9C;
+    padding: 3.5rem 0 2rem 0;
+    height: calc(100vh - 5.5rem);
+}
+.education h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    color: #D3D3D3;
+}
+.formal {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    color: #F5F5DC;
+}
+.self-guided {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    color: #F5F5DC;
+}
+.learning-projects {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    color: #F5F5DC;
+}
+.learning-projects a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #C0C0C0;
+}
+.skills {
+    background-color: #007F7C;
+    padding: 3.5rem 0 2rem 0;
+    height: calc(100vh - 5.5rem);
+}
+.skill-description {
+    display: none;
+    color: white;
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+.skill {
+    text-align: left;  
+    padding-left: 1rem;
+}
+.skills-container li:hover {
+    background-color: #990011;
+    border-radius: 8px;
+}
+.skills-container h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    color: #D3D3D3;
+}
+.skill-title {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: #FFF8DC;
+}
+ul {
+    list-style: none;
+}
+.skills-container li {
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #101820;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    cursor: pointer;
+}
+.my-projects {
+    background-color: #3A4C9C;
+    padding: 3.5rem 0 2rem 0;
+    height: calc(100vh - 5.5rem);
+}
+.my-projects h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    color: #D3D3D3;
+}
+.my-projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.my-projects-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+.my-projects-container a {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 1rem;
+}
+.github-link {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.about-me {
+    background-color: #008C9C;
+    padding: 3.5rem 0 2rem 0;
+    height: calc(100vh - 5.5rem);
+}
+.about-me-container {
+    padding: 1rem;
+}
+.about-me-container h2 {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: #D3D3D3;
+}
+.about-me-container p {
+    font-size: 1.2rem;
+    color:  #FFFFFF;
+}
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+@media screen and (min-width: 1251px) {
+    header {
+        height: 6rem;
+    }
+    header h1 {
+        font-size: 4rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    .hero {
+        padding: 6.5rem 0 2rem 0;
+        height: calc(100vh - 8.5rem);
+    }
+    .work-history,
+    .education,
+    .skills,
+    .skill-title,
+    .my-projects,
+    .about-me {
+        padding: 5rem 0 0 0;
+        height: calc(100vh - 5rem);
+    }
+    .work-history-container h2,
+    .education h2,
+    .skills-container h2,
+    .my-projects h2,
+    .about-me-container h2 {
+        font-size: 5rem;
+    }
+    .work-history-container h3 {
+        font-size: 1.5rem;
+    }
+    .work-history-container p {
+        font-size: 1.3rem;
+    }
+    .hero-content p,
+    .work-history-container span,
+    .formal,
+    .self-guided,
+    .learning-projects,
+    .skill-description,
+    .about-me-container p {
+        font-size: 1.4rem;
+    }
+}
